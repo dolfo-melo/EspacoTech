@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rodol\\source\\repos\\EspacoTech\\EspacoTech\\EspacoTech.csproj": {}
+    "C:\\Users\\rodol\\Documents\\Documents\\Programação\\VisualCode\\GITHUB Desktop\\EspacoTech\\EspacoTech\\EspacoTech.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rodol\\source\\repos\\EspacoTech\\EspacoTech\\EspacoTech.csproj": {
+    "C:\\Users\\rodol\\Documents\\Documents\\Programação\\VisualCode\\GITHUB Desktop\\EspacoTech\\EspacoTech\\EspacoTech.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rodol\\source\\repos\\EspacoTech\\EspacoTech\\EspacoTech.csproj",
+        "projectUniqueName": "C:\\Users\\rodol\\Documents\\Documents\\Programação\\VisualCode\\GITHUB Desktop\\EspacoTech\\EspacoTech\\EspacoTech.csproj",
         "projectName": "EspacoTech",
-        "projectPath": "C:\\Users\\rodol\\source\\repos\\EspacoTech\\EspacoTech\\EspacoTech.csproj",
+        "projectPath": "C:\\Users\\rodol\\Documents\\Documents\\Programação\\VisualCode\\GITHUB Desktop\\EspacoTech\\EspacoTech\\EspacoTech.csproj",
         "packagesPath": "C:\\Users\\rodol\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rodol\\source\\repos\\EspacoTech\\EspacoTech\\obj\\",
+        "outputPath": "C:\\Users\\rodol\\Documents\\Documents\\Programação\\VisualCode\\GITHUB Desktop\\EspacoTech\\EspacoTech\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qN7no4Jc19I=",
+  "dgSpecHash": "GOyo+vAhko0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\rodol\\source\\repos\\EspacoTech\\EspacoTech\\EspacoTech.csproj",
+  "projectFilePath": "C:\\Users\\rodol\\Documents\\Documents\\Programação\\VisualCode\\GITHUB Desktop\\EspacoTech\\EspacoTech\\EspacoTech.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rodol\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\rodol\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
