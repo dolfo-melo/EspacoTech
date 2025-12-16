@@ -1,0 +1,53 @@
+﻿@model IEnumerable<EspacoTech.Models.Sala>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="text-success">Salas</h1>
+
+<p>
+    <a class="btn btn-success" asp-action="Create">Nova Sala</a>
+</p>
+<table class="table">
+    <thead class ="text-success">
+        <tr>
+            <th>
+                Tipo de Sala
+            </th>
+            <th>
+                Capacidade
+            </th>
+            <th>
+                Descrição
+            </th>
+            <th>
+                Equipamentos
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody class ="text-light">
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoSala)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Capacidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Equipamento)
+            </td>
+            <td class="gap-2">
+                <a asp-action="Edit" asp-route-id="@item.IdSala" class="btn btn-warning text-dark"><i class="fa-solid fa-pencil"></i></a>
+                <a asp-action="Details" asp-route-id="@item.IdSala" class="btn btn-primary text-light"><i class="fa-solid fa-circle-info"></i></a>
+                <a asp-action="Delete" asp-route-id="@item.IdSala" class="btn btn-danger text-dark"><i class="fa-solid fa-trash-can"></i></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

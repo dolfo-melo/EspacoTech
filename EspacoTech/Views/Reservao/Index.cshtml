@@ -1,0 +1,53 @@
+﻿@model IEnumerable<EspacoTech.Models.Reserva>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="text-success">Reservas</h1>
+
+<p>
+    <a class="btn btn-success text-light" asp-action="Create">Nova Reserva</a>
+</p>
+<table class="table">
+    <thead class="text-success">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Data)
+            </th>
+            <th>
+                Horário da Reserva
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sala)
+            </th>
+            <th>
+                Usuário
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody class="text-light">
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Data)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Horario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sala.TipoSala)
+            </td>
+            <td>
+                @item.UsuarioPerfil.NomeUsuario
+            </td>
+            <td class="gap-2">
+                <a asp-action="Edit" asp-route-id="@item.IdReserva" class="btn btn-warning text-dark"><i class="fa-solid fa-pencil"></i></a>
+                <a asp-action="Details" asp-route-id="@item.IdReserva" class="btn btn-info text-light"><i class="fa-solid fa-circle-info"></i></a>
+                <a asp-action="Delete" asp-route-id="@item.IdReserva" class="btn btn-danger text-dark"><i class="fa-solid fa-trash"></i></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

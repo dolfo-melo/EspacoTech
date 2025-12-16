@@ -1,0 +1,44 @@
+﻿@model EspacoTech.Models.Reserva
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1 class="text-success">Deletar</h1>
+
+<h3 class="btn btn-danger text-light fw-bolder">Deseja continuar com a remoção da reserva?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2 fw-bold text-warning">
+            @Html.DisplayNameFor(model => model.Data)
+        </dt>
+        <dd class="col-sm-10 text-light">
+            @Html.DisplayFor(model => model.Data)
+        </dd>
+        <dt class="col-sm-2 fw-bold text-warning">
+            @Html.DisplayNameFor(model => model.Horario)
+        </dt>
+        <dd class="col-sm-10 text-light">
+            @Html.DisplayFor(model => model.Horario)
+        </dd>
+        <dt class="col-sm-2 fw-bold text-warning">
+            @Html.DisplayNameFor(model => model.Sala)
+        </dt>
+        <dd class="col-sm-10 text-light">
+            @Html.DisplayFor(model => model.Sala.TipoSala)
+        </dd>
+        <dt class="col-sm-2 fw-bold text-warning">
+            @Html.DisplayNameFor(model => model.UsuarioPerfil)
+        </dt>
+        <dd class="col-sm-10 text-light">
+            @Html.DisplayFor(model => model.UsuarioPerfil.Id)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IdReserva" />
+        <input type="submit" value="Remover" class="btn btn-danger fw-bold text-light" />
+        <a asp-action="Index" class="btn btn-warning fw-bold text-dark">Voltar</a>
+    </form>
+</div>

@@ -1,0 +1,66 @@
+﻿@model EspacoTech.Models.Reserva
+
+@{
+    ViewData["Title"] = "Editar Reserva";
+}
+
+<h1 class="text-success fw-bold">Editar Reserva</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form class="gap-3" asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdReserva" />
+            <div class="form-group">
+                <label asp-for="Data" class="control-label text-light fw-bolder"></label>
+                <input asp-for="Data" class="form-control bg-black bg-gradient border-1 border-light text-light" />
+                <span asp-validation-for="Data" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Horario" class="control-label text-light fw-bolder"></label>
+                <select asp-for="Horario" class="form-control bg-black bg-gradient border-1 border-light text-light">
+                    <option value="">-- Selecione --</option>
+                    <option value="08:00 - 10:00">08:00 às 10:00</option>
+                    <option value="11:00 - 13:00">11:00 às 13:00</option>
+                    <option value="14:00 - 16:00">14:00 às 14:00</option>
+                    <option value="17:00 - 19:00">17:00 às 19:00</option>
+                    <option value="20:00 - 22:00">20:00 às 22:00</option>
+                </select>
+                <span asp-validation-for="Horario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdSala" class="control-label text-light fw-bolder"></label>
+                <select asp-for="IdSala" class="form-control bg-black bg-gradient border-1 border-light text-light" asp-items="ViewBag.IdSala"></select>
+                <span asp-validation-for="IdSala" class="text-danger"></span>
+            </div>
+            @* <div class="form-group">
+                <label asp-for="UsuarioId" class="control-label text-light fw-bolder"></label>
+                <select asp-for="UsuarioId" class="form-control bg-black bg-gradient border-1 border-light text-light" asp-items="ViewBag.UsuarioId"></select>
+                <span asp-validation-for="UsuarioId" class="text-danger"></span>
+            </div> *@
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-success text-light fw-bold" />
+            </div>
+        </form>
+        <div>
+            <a class="btn btn-outline-warning text-light fw-bold" asp-action="Index">Voltar</a>
+        </div>
+    </div>
+
+    <div class=" col-lg minha-imagem order-lg-2 d-flex flex-column justify-content-center mb-5">
+        <div class="container-fluid py-5 d-flex flex-column justify-content-center">
+            <img src="~/src/vazio.png" alt="logo" width="500" height="100" />
+        </div>
+        <div class="container-fluid py-5 d-flex flex-column justify-content-center">
+            <img class="align-self-center" src="~/src/logoMain.png" alt="logo" width="500" height="150" />
+        </div>
+        <div class="container-fluid py-5 d-flex flex-column justify-content-center">
+            <img src="~/src/vazio.png" alt="logo" width="500" height="100" />
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,28 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using EspacoTech.Areas.Identity.Data
+
+@inject SignInManager<Usuario> SignInManager
+@inject UserManager<Usuario> UserManager
+
+<ul class="d-flex flex-row gap-4 navbar-nav align-content-center justify-content-center">
+@if (SignInManager.IsSignedIn(User))
+{
+    <li class="nav-item align-self-center">
+        <a id="manage" class="nav-link fw-bolder text-light" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Bem-vindo @UserManager.GetUserName(User)!</a>
+    </li>
+    <li class="nav-item align-self-center">
+        <form id="logoutForm" class="form-inline btn btn-warning text-light" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+            <button id="logout" type="submit" class="nav-link btn btn-warning text-dark fw-bolder border-0">Logout</button>
+        </form>
+    </li>
+}
+else
+{
+    <li class="nav-item align-self-center">
+            <a class="nav-link btn btn-outline-info text-wrap text-light fw-bold p-2" id="register" asp-area="Identity" asp-page="/Account/Register">Registre-se</a>
+    </li>
+    <li class="nav-item align-self-center">
+            <a class="nav-link btn btn-info text-wrap text-light fw-bold p-2" id="login" asp-area="Identity" asp-page="/Account/Login">Login</a>
+    </li>
+}
+</ul>

@@ -1,0 +1,15 @@
+﻿@inject SignInManager<Usuario> SignInManager
+@{
+    var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();
+}
+<ul class="nav nav-pills flex-column">
+    <li class="nav-item"><a class="nav-link btn btn-success text-light fw-bolder" asp-area="" asp-controller="Reservao" asp-action="Index">Ver Reservas</a></li>
+    <li class="nav-item"><a class="nav-link btn btn-success text-light fw-bolder @ManageNavPages.IndexNavClass(ViewContext)" id="profile" asp-page="./Index">Perfil</a></li>
+    <li class="nav-item"><a class="nav-link btn btn-success text-light fw-bolder @ManageNavPages.EmailNavClass(ViewContext) " id="email" asp-page="./Email">Email</a></li>
+    <li class="nav-item"><a class="nav-link btn btn-success text-light fw-bolder @ManageNavPages.ChangePasswordNavClass(ViewContext)" id="change-password" asp-page="./ChangePassword">Senha</a></li>
+    @if (hasExternalLogins)
+    {
+        <li id="external-logins" class="nav-item btn btn-success text-light fw-bolder"><a id="external-login" class="nav-link @ManageNavPages.ExternalLoginsNavClass(ViewContext)" asp-page="./ExternalLogins">External logins</a></li>
+    }
+    <li class="nav-item"><a class="nav-link btn btn-success text-light fw-bolder @ManageNavPages.PersonalDataNavClass(ViewContext)" id="personal-data" asp-page="./PersonalData">Área Perigosa</a></li>
+</ul>

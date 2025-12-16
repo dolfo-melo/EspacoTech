@@ -1,0 +1,52 @@
+﻿@model EspacoTech.Models.Reserva
+
+@{
+    ViewData["Title"] = "Detalhes Reserva";
+}
+
+<h1 class="text-success fw-bold">Reserva Detalhes</h1>
+
+<div class="d-flex flex-column">
+    <dl class="row text-light">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Data)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Data)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Horario)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Horario)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Sala)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Sala.TipoSala)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UsuarioPerfil)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UsuarioPerfil.NomeUsuario)
+        </dd>
+    </dl>
+    <div class="d-flex flex-row gap-3 mb-5">
+        <a asp-action="Edit" asp-route-id="@Model?.IdReserva">Editar</a>
+        <a asp-action="Index">Voltar</a>
+    </div>
+</div>
+
+<div class=" col-lg minha-imagem order-lg-2 d-flex flex-column justify-content-center mb-5">
+    <div class="container-fluid py-5 d-flex flex-column justify-content-center">
+        <img src="~/src/vazio.png" alt="logo" width="500" height="100" />
+    </div>
+    <div class="container-fluid py-5 d-flex flex-column justify-content-center">
+        <img class="align-self-center" src="~/src/logoMain.png" alt="logo" width="500" height="150" />
+    </div>
+    <div class="container-fluid py-5 d-flex flex-column justify-content-center">
+        <img src="~/src/vazio.png" alt="logo" width="500" height="100" />
+    </div>
+</div>

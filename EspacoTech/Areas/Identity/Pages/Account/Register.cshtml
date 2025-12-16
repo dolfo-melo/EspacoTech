@@ -1,0 +1,43 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Registre-se";
+}
+<main class="minha-imagem d-flex flex-column justify-content-center align-content-center gap-3">
+    <img src="~/src/vazio.png" alt="logo" width="500" height="100" />
+    <div class="container">
+        <div class="container-sm w-50 h-50 align-content-center">
+            <form id="registerForm" class="bg-dark bg-gradient bg-opacity-75 p-3 gap-2" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                <h2 class="text-light fw-bold">Crie uma conta</h2>
+                <hr />
+                <div asp-validation-summary="ModelOnly" class="text-danger fw-bold" role="alert"></div>
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.NomeUsuario" class="form-control text-light border-1 border-light bg-dark bg-gradient bg-opacity-75" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                    <label asp-for="Input.NomeUsuario" class="text-light fw-bolder">Nome Usuário</label>
+                    <span asp-validation-for="Input.NomeUsuario" class="text-danger"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.Email" class="form-control text-light border-1 border-light bg-dark bg-gradient bg-opacity-75" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                    <label asp-for="Input.Email" class="text-light fw-bolder">E-mail</label>
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.Password" class="form-control text-light border-1 border-light bg-dark bg-gradient bg-opacity-75" autocomplete="new-password" aria-required="true" placeholder="password" />
+                    <label asp-for="Input.Password" class="text-light fw-bolder">Senha</label>
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.ConfirmPassword" class="form-control text-light border-1 border-light bg-dark bg-gradient bg-opacity-75" autocomplete="new-password" aria-required="true" placeholder="password" />
+                    <label asp-for="Input.ConfirmPassword" class="text-light fw-bolder">Confirmar Senha</label>
+                    <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                </div>
+                <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-success">Register</button>
+            </form>
+        </div>
+    </div>
+    <img src="~/src/vazio.png" alt="logo" width="500" height="300" />
+</main>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

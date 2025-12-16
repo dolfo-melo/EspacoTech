@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - EspacoTech</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/EspacoTech.styles.css" asp-append-version="true" />
+</head>
+<body class="bg-black bg-gradient">
+    <header class="d-flex flex-wrap justify-content-center py-3 px-5 mb-4 border-bottom bg-success bg-gradient">
+	    <a asp-controller="Home" asp-action="Index" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <img src="~/src/logo.png" alt="headerLogo" width="80" height="80"/>
+	    </a>
+        <div class="d-flex justify-content-center">
+            <partial class="align-self-end mx-5 mt-auto" name="_LoginPartial" />
+        </div> 
+	</header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer mt-auto py-3 bg-success bg-gradient"> 
+        <ul class="nav justify-content-center gap-3"> 
+            <li class="nav-item"><a asp-area="" asp-controller="Salao" asp-action="Index" class="nav-link fw-bolder btn btn-outline-warning  text-light text-decoration-none">Salas</a></li>
+            <li class="nav-item"><a asp-area="" asp-controller="Reservao" asp-action="Index" class="nav-link fw-bolder btn btn-outline-warning  text-light text-decoration-none">Reservas</a></li>
+            <li class="nav-item"><a asp-area="" asp-controller="Identity" asp-action="/Account/Login" class="nav-link px-2 btn btn-info fw-bolder text-light text-decoration-none">Login</a></li>
+        </ul> 
+        <div class="d-flex gap-5 justify-content-center align-content-center">
+            <p class="text-center text-body-secondary text-light fw-bolder">© 2025 Espaco Tech</p>
+            <a href="#"><i class="fa-solid fa-angles-up text-light"></i></a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/d951e5a919.js" crossorigin="anonymous" defer></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

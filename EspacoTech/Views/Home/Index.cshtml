@@ -1,0 +1,170 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+<body>
+    <main>
+        <div class="row align-items-md-stretch">
+            <div class="col-md-6">
+                <div class="h-100 p-5 text-bg-dark rounded-3">
+                    <img src="~/src/logoMain.png" alt="logo" width="500" height="150" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="h-100 p-5 minha-imagem border rounded-3 d-flex flex-row gap-5 justify-content-center">
+                    <div>
+                        <a class="btn btn-outline-warning text-light fw-bold" href="#sobreNos">Sobre Nós</a>
+                    </div>
+                    <div>
+                        <a class="btn btn-outline-warning text-light fw-bold" href="#nossaSalas">Salas</a>
+                    </div>
+                    <div>
+                        <a class="btn btn-outline-warning text-light fw-bold" asp-controller="Reservao" asp-action="Index">Reservas</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="p-5 mt-4 mb-4 minha-imagem rounded-3 d-flex justify-content-center">
+            <div class="container-fluid py-5 d-flex flex-column justify-content-center">
+                <img src="~/src/vazio.png" alt="logo" width="500" height="300"/>
+            </div>
+        </div>
+
+        <!-- Salas -->
+        <div id="nossaSalas" class="container-fluid gap-lg-2">
+            <h1 class="display-5 fw-bold lh-1 mb-3 text-light border-bottom pb-2 fs-3 fst-italic"></h1>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette align-self-end">
+                <div class="col-lg-6 text-start">
+                    <h1 class="display-5 fw-bold lh-1 mb-3 text-success">Coworking Tech</h1>
+                    <p class="lead fw-bold text-light">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                        <a asp-controller="Salao" asp-action="Details" asp-route-id="1" class="btn btn-warning btn-lg px-4 me-md-2">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img class="featurette-image img-fluid mx-auto" src="~/src/CoWorkingTechImg.png" width="100%" height="100%" loading="lazy" />
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+            <div class="row featurette align-self-start">
+                <div class="col-md-5 order-md-1 justify-content-start">
+                    <img class="featurette-image img-fluid mx-auto" src="~/src/AuditorioTechImg.png" width="100%" height="100%" loading="lazy" />
+                </div>
+                <div class="col-lg-6 order-lg-2 text-end">
+                    <h1 class="display-5 fw-bold lh-1 mb-3 text-success">Auditorio Tech</h1>
+                    <p class="lead fw-bold text-light">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <a asp-controller="Salao" asp-action="Details" asp-route-id="3" class="btn btn-warning btn-lg px-4 me-md-2">Saiba Mais</a>
+                        <a asp-controller="Reservao" asp-action="Index" class="btn btn-outline-warning btn-lg px-4 me-md-2">Reserve Agora</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="featurette-divider">
+
+            <div class="row featurette align-self-end">
+                <div class="col-lg-6 text-start">
+                    <h1 class="display-5 fw-bold lh-1 mb-3 text-success">Sala Tech</h1>
+                    <p class="lead fw-bold text-light">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                        <a asp-controller="Salao" asp-action="Details" asp-route-id="2" class="btn btn-warning btn-lg px-4 me-md-2">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="~/src/SalaTechImg.png" width="100%" height="100%" loading="lazy" />
+                </div>
+            </div>
+            <hr class="featurette-divider">
+        </div>
+
+        <!-- Sobre Nos -->
+        <div id="sobreNos" class="container px-4 py-5"> 
+            <h2 class="display-5 fw-bold lh-1 mb-3 pb-2 border-bottom text-light fs-3 fst-italic"></h2> 
+            <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5"> 
+                <div class="col d-flex flex-column align-items-start gap-2"> 
+                        <div class="h-100 p-5 minha-imagem border rounded-3 d-flex flex-column gap-5 justify-content-center">
+                            <h2 class="fw-bold text-body-emphasis text-light">Sobre Nós</h2>
+                            <p class="text-body-secondary btn btn-success text-light fw-bolder">Somos uma empresa de inovação que busca fornecer um espaço completo, para pessoas que buscam se conectar e desenvolver-se imerso na Tecnologia </p>
+                        </div>
+                </div> 
+                <div class="col"> 
+                    <div class="row row-cols-1 row-cols-sm-2 g-4"> 
+                        <div class="col d-flex flex-column gap-2"> 
+                            <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3 w-50 h-50">
+                                <i class="fa-solid fa-computer text-success"></i>
+                            </div> 
+                            <h4 class="fw-semibold mb-0 text-body-emphasis text-success">Notebooks</h4> 
+                            <p class="text-body-secondary text-light opacity-75">Disponibilizamos Notebooks de última geração</p>
+                        </div> 
+                        <div class="col d-flex flex-column gap-2"> 
+                            <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3 w-50 h-50">
+                                <i class="fa-solid fa-tv text-success"></i>
+                            </div> 
+                            <h4 class="fw-semibold mb-0 text-body-emphasis text-success">Totem Educativo</h4>
+                            <p class="text-body-secondary text-light opacity-75">Apresente sua ideia com nossos Totens de Alta Definição</p>
+                        </div> 
+                        <div class="col d-flex flex-column gap-2"> 
+                            <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3 w-50 h-50">
+                                <i class="fa-solid fa-network-wired text-success"></i>
+                            </div> 
+                            <h4 class="fw-semibold mb-0 text-body-emphasis text-success">Equipe de T.I</h4>
+                            <p class="text-body-secondary text-light opacity-75">Suporte da equipe de T.I para problemas técnicos</p>
+                        </div> 
+                        <div class="col d-flex flex-column gap-2"> 
+                            <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-success bg-gradient fs-4 rounded-3 w-50 h-50">
+                                <i class="fa-solid fa-bell-concierge text-success"></i>
+                            </div> 
+                            <h4 class="fw-semibold mb-0 text-body-emphasis text-success">Equipe de Administração</h4>
+                            <p class="text-body-secondary text-light opacity-75">Equipe preparada para fornecer a segurança e recepção que você merece</p>
+                        </div> 
+                    </div> 
+                </div> 
+            </div> 
+        </div>
+            
+
+
+            <!-- Dúvidas-->
+        <div class="p-5 mt-4 mb-4 minha-imagem rounded-3 d-flex justify-content-center">
+            <div class="container-fluid py-5 d-flex flex-column justify-content-center">
+                <img src="~/src/vazio.png" alt="logo" width="500" height=100" />
+            </div>
+            <div class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center mb-xxl-5">
+                <div class="list-group"> 
+                    <div class="list-group-item list-group-item-action d-flex gap-3 py-3 bg-warning bg-gradient container-lg" aria-current="true">
+                        <div class="d-flex gap-2 w-100 justify-content-between">     
+                            <div class="text-center">
+                                <h6 class="mb-0 text-black fw-bold">Suporte</h6>
+                                <p class="mb-0 opacity-75">contato@espacotech.com</p> 
+                            </div> 
+                        </div> 
+                    </div> 
+                    <div class="list-group-item list-group-item-action d-flex gap-3 py-3 bg-warning bg-gradient container-lg" aria-current="true">
+                        <div class="d-flex gap-2 w-100 justify-content-between"> 
+                            <div class="text-center">
+                                <h6 class="mb-0 text-black fw-bold">Horário de Funcionamento</h6>
+                                <p class="mb-0 opacity-75">Seg a Sex de (8:00 às 22:00)</p>
+                            </div> 
+                        </div> 
+                    </div> 
+                    <div class="list-group-item list-group-item-action d-flex gap-3 py-3 bg-warning bg-gradient container-lg" aria-current="true">
+                        <div class="d-flex gap-2 w-100 justify-content-between"> 
+                            <div class="text-center">
+                                <h6 class="mb-0 text-black fw-bold text-center">Fechamos aos Feriados</h6>
+                                <p class="mb-0 opacity-75">Limpeza e Manutenção de Salas</p> 
+                            </div> 
+                        </div> 
+                    </div> 
+                </div> 
+            </div>
+            <div class="container-fluid py-5 d-flex flex-column justify-content-center">
+                <img src="~/src/vazio.png" alt="logo" width="500" height=100" />
+            </div>
+        </div>
+            
+    </main>
+</body>
