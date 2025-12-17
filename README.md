@@ -65,4 +65,5 @@ Abra o Console do Gerenciador de Pacotes (Package Manager Console) e execute:
     Add-Migration InitialTable
 
     # Atualiza o Banco de Dados
+    Update Data-Base
 ```
