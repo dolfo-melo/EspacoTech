@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EspacoTech")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d7bfe0b3e5264e807faac198a14d541f7f9b4fb8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+57178f8ea66dc982d147bb565d8908dd7e4456cc")]
 [assembly: System.Reflection.AssemblyProductAttribute("EspacoTech")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EspacoTech")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

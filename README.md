@@ -1,4 +1,7 @@
-# EspacoTech by Rodolfo Melo
+
+<img src="EspacoTech/wwwroot/src/logoMain.png" alt="logo">
+
+## by Rodolfo Melo
 
 O **EspacoTech** é uma solução web desenvolvida em **ASP.NET MVC** focada na gestão inteligente de reservas e espaços. O sistema foi projetado para oferecer uma interface amigável e segura, permitindo que usuários autenticados gerenciem agendamentos de forma eficiente.
 
@@ -42,7 +45,7 @@ Siga as etapas abaixo para configurar o ambiente em sua máquina local:
 ### 1. Clonagem
 Clone o repositório para o seu diretório local:
 ```bash
-git clone [https://github.com/seu-usuario/espacotech.git](https://github.com/seu-usuario/espacotech.git)
+git clone [https://github.com/dolfo-melo/espacotech.git](https://github.com/username/espacotech.git)
 ```
 
 ### 2. Abrir sua IDE de Desenvolvimento
@@ -53,7 +56,7 @@ Localize o arquivo appsettings.json na raiz do projeto e atualize a chave Defaul
   }
 ```
 
-### 4. Remova a pasta de Migração
+### 4. Remova a pasta "Migrations"
 
 ### 5. Adicionar Migração e Atualizar Banco de Dados
 Abra o Console do Gerenciador de Pacotes (Package Manager Console) e execute:
