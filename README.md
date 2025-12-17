@@ -19,6 +19,7 @@ Ele utiliza o padrão de arquitetura **MVC (Model-View-Controller)** para separa
 * **Framework:** .NET 8
 * **ORM:** Entity Framework Core (EF Core)
 * **Banco de Dados:** Microsoft SQL Server 2022
+* **Sistema Gerenciador DB:** SQL Server Managment Studio 19
 * **Bibliotecas Adicionais:**
     * `EntityFrameWorkCore.SqlServer` & `Design`
     * `EntityFrameWorkCore.Tools` (Gerenciamento de Migrations)
@@ -26,7 +27,7 @@ Ele utiliza o padrão de arquitetura **MVC (Model-View-Controller)** para separa
 
 ### **Front-end**
 * **Linguagens:** HTML5, CSS3, JavaScript
-* **Design:** Layout Responsivo (adaptável a dispositivos móveis e desktop)
+* **Design:** Bootstrap - Layout Responsivo
 
 ---
 
@@ -45,14 +46,22 @@ Siga as etapas abaixo para configurar o ambiente em sua máquina local:
 ### 1. Clonagem
 Clone o repositório para o seu diretório local:
 ```bash
-git clone [https://github.com/dolfo-melo/espacotech.git](https://github.com/username/espacotech.git)
+git clone https://github.com/dolfo-melo/EspacoTech.git
 ```
 
 ### 2. Abrir sua IDE de Desenvolvimento
 Localize o arquivo appsettings.json na raiz do projeto e atualize a chave DefaultConnection com as credenciais do seu SQL Server:
+
+  * Windows Authenticator
 ```bash
 "ConnectionStrings": {
   "DefaultConnection": "Server=SUA_INSTANCIA;Database=EspacoTechDb;Trusted_Connection=True;TrustServerCertificate=True"
+  }
+```
+ * SQL Server Authenticator
+```bash
+"ConnectionStrings": {
+  "DefaultConnection": "Server=SUA_INSTANCIA;Database=EspacoTechDb;User id=username;Password=senha;TrustServerCertificate=True"
   }
 ```
 
